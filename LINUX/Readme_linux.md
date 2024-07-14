@@ -72,7 +72,7 @@ Then,  copy the next script:
 
 		echo -e "-------------------------------------------------------" >> $output_file
 Use command ctrl + o to write out the file
-Use command ctrl + x to exit
+and use command ctrl + x to exit
 
 ### Download the bash script file.
 
