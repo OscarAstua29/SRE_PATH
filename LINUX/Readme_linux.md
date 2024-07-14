@@ -9,7 +9,7 @@ This command will create de user 'devuser'.
 		$sudo passwd devuser
 	This command will ask for a password for the user 'devuser'. Enter the a password,  and then reconfirm the password.
 
-	You just created  a user, now let´s create a group.
+You just created  a user, now let´s create a group.
 
 		$sudo groupadd  developers 
 Now,  let´s assing the user 'devuser'  to the group 'developers'
@@ -25,9 +25,7 @@ Finally,  we just need to change the directory permissions.
 
 		chmod  755 opt/devproject
 
------
 
------
 
 ##PART 2
 ###System maintenance
