@@ -27,8 +27,8 @@ Finally,  we just need to change the directory permissions.
 
 
 
-##PART 2
-###System maintenance
+## PART 1
+### User creation and permission assignment
 
 #####Create the bash script file from scratch
 
