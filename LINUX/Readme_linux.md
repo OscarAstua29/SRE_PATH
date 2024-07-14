@@ -71,6 +71,8 @@ Then,  copy the next script:
 		ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head -n 6 >> $output_file
 
 		echo -e "-------------------------------------------------------" >> $output_file
+Use command ctrl + o to write out the file
+Use command ctrl + x to exit
 
 ### Download the bash script file.
 
