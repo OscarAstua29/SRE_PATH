@@ -1,0 +1,41 @@
+MAINTENANCE OUTPUT
+dom 14 jul 01:15:59 CST 2024
+-------------------------------------------------------
+Hit:1 http://cr.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://cr.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:3 http://cr.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease
+Fetched 257 kB in 1s (322 kB/s)
+Reading package lists...
+-------------------------------------------------------
+System updated
+-------------------------------------------------------
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
+Unnecesary data deleted
+-------------------------------------------------------
+State of ROM 
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1,2G  2,1M  1,2G   1% /run
+efivarfs        184K  163K   17K  92% /sys/firmware/efi/efivars
+/dev/sda2       468G   20G  425G   5% /
+tmpfs           5,7G   53M  5,6G   1% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           5,7G     0  5,7G   0% /run/qemu
+/dev/sda1       511M  6,1M  505M   2% /boot/efi
+tmpfs           1,2G  132K  1,2G   1% /run/user/1000
+-------------------------------------------------------
+Active Users 
+oscar    tty2         2024-07-13 11:31 (tty2)
+-------------------------------------------------------
+Top 5 proccess that consume most CPU 
+    PID    PPID CMD                         %CPU
+  22782   13164 /opt/google/chrome/chrome - 12.6
+  14368   13840 /usr/lib/virtualbox/VBoxHea  2.2
+  13144    1714 /opt/google/chrome/chrome    1.7
+  23844   13164 /opt/google/chrome/chrome -  1.4
+  22575   13164 /opt/google/chrome/chrome -  0.8
+-------------------------------------------------------
