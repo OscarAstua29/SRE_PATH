@@ -27,8 +27,8 @@ Finally,  we just need to change the directory permissions.
 
 
 
-## PART 1
-### User creation and permission assignment
+## PART 2
+### System maintenance
 
 #####Create the bash script file from scratch
 
@@ -40,6 +40,6 @@ Then,  copy the next script
 
 
 
-#####Download the bash script file
+#### Download the bash script file
 
 Download the system_maintenance.sh, then run the next command to apply the system_maintenance.sh 
