@@ -97,4 +97,5 @@ Finally, restar the Nginx tu apply the changes:
 
         sudo systemctl restart nginx
 
-##4-Open your browser and write que dns of you react-demo file 
+##4-Open your browser and write the ip host 192.168.56.10
+Now if you can see the react app, everyting is ok, congrats.
