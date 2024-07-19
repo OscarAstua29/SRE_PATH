@@ -76,7 +76,7 @@ Now, copy the following lines:
 
         server {
     listen 80;
-    server_name example.com;  # Despite use example.com you can change it to your name
+    server_name example.com;  # Instead of use example.com you can change it to your name
 
     root /here, write the root of your react-demo directory/react-demo/build; in my case root /react-demo/build)
     index index.html;
