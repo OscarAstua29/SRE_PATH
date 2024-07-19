@@ -45,7 +45,7 @@ To run de app, we need to clone a repository, so lets install git:
 
     sudo apt install git
     
-Now, leta clone de repository with the following command:
+Now, lets clone de repository with the following command:
 
     git clone https://github.com/falconcr/react-demo
 
@@ -66,7 +66,7 @@ To install Nginx run the following commands:
         sudo apt-get update
         sudp apt-get install nginx
 
-Now, move to the next root:
+Now, move to the next root, and create a file call react-demo:
 
         cd /etc/nginx/sites-available
         
@@ -76,10 +76,9 @@ Now, copy the following lines:
 
         server {
     listen 80;
-    server_name example.com;  # Cambia esto al no
-mbre de dominio de tu aplicación
+    server_name example.com;  # Despite use example.com you can change it to your name
 
-    root /ruta/a/tu/proyecto/react-demo/build;
+    root /here, write the root of your react-demo directory/react-demo/build; in my case root /react-demo/build)
     index index.html;
 
     location / {
@@ -90,10 +89,12 @@ mbre de dominio de tu aplicación
 
 Press ctrl + o to write out and ctrl + x to exit
 
-now, lets create an a symbolic link between the sites-available and sites-enebled to enable the configuration:
+Now, lets create an a symbolic link between the sites-available and sites-enebled to enable the configuration:
 
         sudo ln -s /etc/nginx/sites-available/react-demo /etc/nginx/sites-enabled/
         
 Finally, restar the Nginx tu apply the changes:
 
         sudo systemctl restart nginx
+
+##4-Open your browser and write que dns of you react-demo file 
