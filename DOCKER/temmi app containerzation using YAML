@@ -1,0 +1,18 @@
+# Deploying a Web app using docker from Compose.yaml 
+## Let's do this
+
+Download the **COMPOSE.YAML** file.
+
+Open you terminal and run the following command:
+
+    $docker compose up
+    
+To stop the containers press **ctrl + c**
+
+To inicialize the container created, run the following command:
+
+    $docker compose start
+
+To stop and delete the containers created, run the following command:
+
+    $docker compose down
