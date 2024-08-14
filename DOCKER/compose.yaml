@@ -1,0 +1,52 @@
+version: '3.8'
+
+volumes:
+  teemii-data:
+    name: teemii-data
+
+services:
+
+##FRONTEND CONTAINER
+
+  teemii-frontend:
+    image: 'dokkaner/teemii-frontend:develop'
+    build:
+      context: ./
+    ports:
+      - 8080:80
+    networks:
+      - teemii-network
+      
+##BACKEND CONTAINER
+
+  teemii-backend:
+    image: 'dokkaner/teemii-backend:develop'
+    build:
+      context: ./
+    ports:
+      - 3000:3000
+    networks:
+      - teemii-network
+    volumes:
+      - teemii-data:/path/to/backend/data
+
+  ### DATABASE
+  db: 
+    image: postgres
+    restart: always
+    user: postgres
+    volumes:
+      - teemii-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=12345
+    expose:
+      - 5432
+    healthcheck:
+      test: ["CMD", "pg_is_ready "]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+networks:
+  teemii-network:
+    driver: bridge
