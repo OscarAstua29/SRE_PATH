@@ -15,9 +15,13 @@ Then, provide your AWS Account credentials when prompted:
     Default region name [None]: example(us-east-1)
     Default output format [None]: example(json)
 
-Once thats done, initialize the Terraform configurations, by running the following command:
+Once thats done, initialize the Terraform, running the following command:
 
     terraform init
+    
+then, to apply the Terraform configurations, by running the following command:
+
+    terraform apply
     
 If everything is correct,the console will display the Instance id, and the public ip of the EC2 instance, then, copy the public ip in a browser. You should see the nginx welcome page.
 
