@@ -1,0 +1,5 @@
+name: Ansible Challenge - Apaceh Instalation with roles
+hosts: all
+become: yes
+roles:
+- apache_install

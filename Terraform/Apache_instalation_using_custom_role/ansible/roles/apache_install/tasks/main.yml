@@ -1,0 +1,31 @@
+
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present # if apache2 is already install, nothig happens
+    update_cache: yes # Update packages before install apache2
+
+- name: Copy the config apache file
+  template:
+    src: apache_config.j2
+    # dest: /etc/apache2/sites-available/000-default.conf
+  notify: Restart Apache
+
+- name: Copy the index of the web site
+  template:
+    src: index.html.j2
+    # dest: "{{ document_root }}/index.html"
+
+# - name: Enable written mode
+#   command: a2enmod rewrite
+#   notify: Restart Apache
+
+- name: Enable the site
+  command: a2ensite 000-default
+  notify: Restart Apache
+
+- name: Run the apache service
+  service:
+    name: apache2
+    state: started
+    enabled: true

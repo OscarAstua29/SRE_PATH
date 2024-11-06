@@ -1,0 +1,24 @@
+# cloud-config
+
+# add group to the system
+# adding a ubuntu group with members 'root' ans 'sys'
+# and the empty group hashicorp
+groups:
+   - ubuntu: [root,sys]
+   - hashicorp
+
+# add users to the system. users are added after de groups are added
+users:
+  - default
+  - name: terraform
+    gecos: "terraform user"  #gecos = General Electric Comprehensive Operating Supervisor)
+    shell: /bin/bash
+    primary_group: hashicorp
+    sudo: ALL=(ALL) NOPASSWD:ALL #execute command without password
+    groups: users, admin
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDurcvr1wcMKF8wjOYwt/8raopPYrOxBnHwbDCoMVgjw4DwIuRt8y50qRAmPXO4AVU5zBup8WXecWpwBGeiAau/jWsnnjVNE1tD4vUkMpNQjzJGybdIpOtH50aKXcYZj7emxM3i5tsd6CymEHZ+rvEDBjUIuwgTiyvqPtIcPQLRcZRtnujO4cozHLwiSif3d2IunACPtNSalgkE0I9MsK6cLQTJp9kxIuqPlrX9Tbtbo1KByyamxdaxMzf7yjB7zNRd4mgFXSkJDiU0tZorrWJvvIBa1EFPA4jkjC/C851Z76dUXAAAUEFSicHFln1jf3vosqU9i5SlXHlGy0GXtKQf
+
+ 
+
